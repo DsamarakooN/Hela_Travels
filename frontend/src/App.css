@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+button {
+    background-color: #25D366;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Style the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+    background-color: #3af481; /* Change this to the desired color */
+    border-radius: 5px;
+  }
+  
+  /* Style the scrollbar track */
+body::-webkit-scrollbar-track {
+    background-color: #eee; /* Change this to the desired color */
+    border-radius: 5px;
+  }
+
+
+
+  /*Header*/
+  .navbar .navbar-nav .nav-link {
+    color: black;
+  }
+  .navbar .navbar-brand {
+    color: black;
+  }
+  .sm-icons {
+    display: flex;
+  }
+  .sm-icons .nav-link {
+    padding-right: 1em;
+  }
+
+  .sm-icons .icon {
+    color: #25D366; /* This is the original color of the icons */
+  }
+  
+  .sm-icons .icon:hover {
+    color: #25964e;
+  }
+
+  a,
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 1.1em;
+
+    color: black;
+
+    &:hover {
+      color: #25D366;
+    }
+}
+
+
+  /* hero section */
+  .headline {
+    left: 130px;
+  } 
+  .clipped {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  @media screen and (max-width: 650px){
+    .headline {
+      left: 20px;
+    } 
+    .clipped {
+      clip-path: none;
+      max-height: 300px !important;
+    }
+  }
