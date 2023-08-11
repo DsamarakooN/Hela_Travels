@@ -87,13 +87,14 @@ return (
     <div className="container p-3 my-3 border">
         
     <br/><br/>
-        <h2 className="text-danger text-left">Contact Your Driver....</h2>
+        <h2 className="text-danger text-center">Contact Your Driver....</h2>
         <br/><br/>
     <div className="row">   
     
         <div className="col-md-3">
         <div className="image">
-            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" className="avatar img-circle img-thumbnail" alt="avatar"/>
+            <img src={d_image} className="avatar img-circle img-thumbnail" alt="avatar"/>
+            <img src={v_image} className="avatar img-circle img-thumbnail" alt="avatar"/>
             </div>
             <div className="text-center">
                 
@@ -109,9 +110,9 @@ return (
                     <h5 className="user-name">Driving Licence No: {d_licNo}</h5>
                     <h5 className="user-name">Experience: {d_experience}</h5>
                     <h5 className="user-name">Vehicle Type: {v_type}</h5>
-                    <h5 className="user-name">Vehicle image: {v_image}</h5>
+                    
                     <h5 className="user-name">Description: {d_description}</h5>
-                    <h5 className="user-name">Profile Picture: {d_image}</h5>
+                    
 
                  
        
