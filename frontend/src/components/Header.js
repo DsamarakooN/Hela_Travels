@@ -1,10 +1,11 @@
 
 import React from "react";
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import { Facebook, Instagram, Twitter, Pinterest } from 'react-bootstrap-icons';
 import "../App.css"
 import { Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 
 function Header() {
@@ -22,32 +23,32 @@ function Header() {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
           <Nav.Item>
               <Nav.Link>
-                <Link to='/'>Home</Link>
+                <NavLink to='/' activeClassName='active-nav-link'>Home</NavLink>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to='/about'>Packages</Link>
+                <NavLink to='/about' activeClassName='active-nav-link'>Packages</NavLink>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to='/destinations'>Destinations</Link>
+                <NavLink to='/destinations' activeClassName='active-nav-link'>Destinations</NavLink>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to='/Product'>Hotels</Link>
+                <NavLink to='/Product' activeClassName='active-nav-link'>Hotels</NavLink>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to='/contact'>Guides</Link>
+                <NavLink to='/contact' activeClassName='active-nav-link'>Guides</NavLink>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to='/all'>Drivers</Link>
+                <NavLink to='/all' activeClassName='active-nav-link'>Drivers</NavLink>
               </Nav.Link>
             </Nav.Item>
           </ul>

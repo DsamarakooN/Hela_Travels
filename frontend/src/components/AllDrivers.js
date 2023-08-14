@@ -85,10 +85,7 @@ export default function AllDrivers(){
                 </center>
             </div>
             </div>
-            
-           
-        
-        
+               
         )})
           }
            <hr></hr>

@@ -18,7 +18,7 @@ function Footer() {
     <div className="container-fluid text-center text-md-left">
         <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
-            <a className="navbar-brand fw-bold fst-italic fs-2" href="#" style={{color:"#25D366"}}>Serendib Explorers</a>
+            <a className="navbar-brand fw-bold fst-italic fs-2" href="#" style={{color:"#25D366"}}>Hela Travels</a>
             
             <div class="container ">
             <a href="#"><i class="fa fa-facebook"></i></a>

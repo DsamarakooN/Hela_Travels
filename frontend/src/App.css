@@ -49,9 +49,12 @@ body::-webkit-scrollbar-track {
   .sm-icons .icon:hover {
     color: #25964e;
   }
+  .active-nav-link {
+    color: #25D366 !important; /* Replace with the desired color for active navigation items */
+  }
 
   a,
-  .navbar-brand,
+  
   .navbar-nav .nav-link {
     font-weight: 600;
     font-size: 1.1em;
@@ -61,6 +64,10 @@ body::-webkit-scrollbar-track {
     &:hover {
       color: #25D366;
     }
+}
+
+.navbar-brand{
+  font-size: 1.5em;
 }
 
 
