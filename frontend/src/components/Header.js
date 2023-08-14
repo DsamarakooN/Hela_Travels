@@ -25,34 +25,34 @@ function Header() {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
           <Nav.Item>
              
-                <NavLink exact to='/' className={`${location.pathname === "/" ? '':'active-nav-link'}`}>Home</NavLink>
+                <NavLink  to='/' className={`${location.pathname === "/" ? 'active-nav-link':''}`}>Home</NavLink>
              
             </Nav.Item>
 
             <Nav.Item className="nav-item">
              
-                <NavLink exact to='/about' className={`${location.pathname === "/about" ? '':'active-nav-link'}`}>Packages</NavLink>
+                <NavLink  to='/about' className={`${location.pathname === "/about" ? 'active-nav-link':''}`}>Packages</NavLink>
              
             </Nav.Item>
             
             <Nav.Item className="nav-item">
              
-                <NavLink exact to='/destinations' className={`${location.pathname === "/destinations" ? '':'active-nav-link'}`}>Destinations</NavLink>
+                <NavLink  to='/destinations' className={`${location.pathname === "/destinations" ? 'active-nav-link':''}`}>Destinations</NavLink>
              
             </Nav.Item>
             <Nav.Item className="nav-item">
              
-                <NavLink exact to='/Product' className={`${location.pathname === "/Product" ? '':'active-nav-link'}`}>Hotels</NavLink>
+                <NavLink to='/Product' className={`${location.pathname === "/Product" ? 'active-nav-link':''}`}>Hotels</NavLink>
              
             </Nav.Item>
             <Nav.Item>
              
-                <NavLink to='/contact' className={`${location.pathname === "/contact" ? '':'active-nav-link'}`}>Guides</NavLink>
+                <NavLink to='/contact' className={`${location.pathname === "/contact" ? 'active-nav-link':''}`}>Guides</NavLink>
              
             </Nav.Item>
             <Nav.Item>
              
-                <NavLink exact to='/all' className={`${location.pathname === "/all" ? '':'active-nav-link'}`}>Drivers</NavLink>
+                <NavLink to='/all' className={`${location.pathname.startsWith("/all") ? 'active-nav-link':''}`}>Drivers</NavLink>
              
             </Nav.Item>
           </ul>
