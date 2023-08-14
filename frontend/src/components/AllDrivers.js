@@ -85,42 +85,6 @@ export default function AllDrivers(){
                 </center>
             </div>
             </div>
-           
-          
-
-            // <tr key={index}> 
-            // <th scope="row">{index+1}</th>
-      
-             
-            //  <tr>
-            //  <td> {d.d_image}</td>
-            //  </tr>
-            //  <tr>
-            //  <td><h3>{d.d_name}</h3></td>
-            //  </tr>
-            //  <tr>
-            //  <td><h5>{d.d_email}</h5></td>
-            //  </tr>
-            //  <tr>
-            //  <td><h5>{d.d_telephone}</h5></td>
-            //  </tr>
-            
-            //  <tr>
-            //  <td><h5>{d.v_type}</h5></td>
-            //  </tr>
-             
-            //  <tr>
-            //  <td><h5>{d.d_description}</h5></td>
-            //  </tr>
-            //  <hr></hr>
-             
-            
-              
-            //  <div className="btn-bar">
-            //  <td> <Link to={"view/"+d._id}><button  className='btn btn-warning'>View more</button></Link> </td>
-            //         </div>
-            // </tr>
-
             
            
         
