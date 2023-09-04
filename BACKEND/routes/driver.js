@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Driver = require("../models/driver");
+let Driver = require("../models/driverModel");
 
 router.route("/add").post((req,res)=>{
 
