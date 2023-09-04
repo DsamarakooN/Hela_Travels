@@ -8,7 +8,7 @@ function DriverTable(){
 
     useEffect(() => {
         function getDrivers() {
-            axios.get("http://localhost:8070/driver/").then((res) => {
+            axios.get("http://localhost:8070/api/drivers/").then((res) => {
                 setDrivers(res.data);
             }).catch((err) => {
                 alert(err.message);
@@ -23,7 +23,7 @@ function DriverTable(){
         var answer = window.confirm("Are you sure")
 
 if(answer){
-    axios.delete("http://localhost:8070/driver/delete/"+id).then((res)=>{
+    axios.delete("http://localhost:8070/api/drivers/delete/"+id).then((res)=>{
             if(res.status===200){
                 alert("Driver deleted")
                 // getGuides()

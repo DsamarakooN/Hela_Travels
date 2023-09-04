@@ -17,7 +17,7 @@ connectDB();
 
 const driverRouter = require("./routes/driverRoutes.js");
 
-app.use("/driver",driverRouter);
+app.use("/api/drivers",driverRouter);
 
 app.listen(PORT, () => {
     console.log(`🚀Server is up and running on port number:${PORT}`)

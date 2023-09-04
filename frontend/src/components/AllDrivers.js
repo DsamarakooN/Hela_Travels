@@ -20,7 +20,7 @@ export default function AllDrivers(){
 
     useEffect(() => {
         function getDrivers(){
-            axios.get("http://localhost:8070/driver/").then((res) => {
+            axios.get("http://localhost:8070/api/drivers/").then((res) => {
                 setDrivers(res.data);
             }).catch((err) => {
                 alert(err.message);

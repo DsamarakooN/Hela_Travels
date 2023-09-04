@@ -4,7 +4,7 @@ import axios from "axios";
 import {Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-// Edithotel componenet 
+
 const UpdateDriver = (props) => {
     const {id} = useParams();
     const Navigate = useNavigate()
@@ -33,7 +33,7 @@ const UpdateDriver = (props) => {
     const onSubmit = (driverObject) => {
         axios
         .put(
-            `http://localhost:8070/driver/update/${id}`,
+            `http://localhost:8070/api/drivers/update/${id}`,
             driverObject
         )
         .then((res) => {
@@ -49,7 +49,7 @@ const UpdateDriver = (props) => {
     useEffect(() => {
         axios
         .get(
-            `http://localhost:8070/driver/get/${id}`
+            `http://localhost:8070/api/drivers/get/${id}`
         )
         .then((res) =>  {
             const {d_name,d_email,d_telephone,d_licNo,d_experience,v_type,v_image,d_description,d_image}= res.data.driver;
@@ -92,7 +92,7 @@ function sendData(e){
         d_image
     }
 
-    axios.put(`http://localhost:8070/driver/update/${id}`, newDriver).then((res) =>{
+    axios.put(`http://localhost:8070/api/drivers/update/${id}`, newDriver).then((res) =>{
 	  alert("Driver Updated" )
 	 console.log(res.data)
 	 Navigate(`/admin`)
