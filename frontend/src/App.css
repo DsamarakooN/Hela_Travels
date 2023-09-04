@@ -97,12 +97,10 @@ body::-webkit-scrollbar-track {
   /* Drivers cards */
 
   .driverCards {
-    margin: 0 auto;
+    margin: 15px 10px 15px 10px;
     /* text-align: center; */
     display: -webkit-flex;
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
     border-radius: 10px;
     -webkit-justify-content: center; 
     justify-content: center;
