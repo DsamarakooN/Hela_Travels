@@ -15,9 +15,12 @@ app.use(bodyParser.json());
 const connectDB = require("./config/db.js");
 connectDB();
 
-const driverRouter = require("./routes/driverRoutes.js");
 
-app.use("/api/drivers",driverRouter);
+
+app.use('/api/users', require('./routes/userRoutes.js'))
+app.use("/api/drivers", require("./routes/driverRoutes.js"));
+
+
 
 app.listen(PORT, () => {
     console.log(`🚀Server is up and running on port number:${PORT}`)
