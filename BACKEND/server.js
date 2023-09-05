@@ -18,7 +18,7 @@ connectDB();
 
 
 app.use('/api/users', require('./routes/userRoutes.js'))
-app.use("/api/drivers", require("./routes/driverRoutes.js"));
+app.use("/api/drivers", require("./routes/driverRoutes.js"))
 
 
 
