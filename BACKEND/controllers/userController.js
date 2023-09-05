@@ -15,7 +15,7 @@ const registerUser = asyncHandler(async (req, res) => {
         businessType
     } = req.body
 
-    if (!name || !email || !password ) {
+    if (!name || !email || !password) {
         res.status(400)
         throw new Error('Please fill all the fields')
     }
