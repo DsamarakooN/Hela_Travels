@@ -1,143 +1,84 @@
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {useNavigate} from 'react-router-dom'
-import {toast} from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
-import { register , reset } from '../features/auth/authSlice'
-import { Facebook, Google, Apple, Twitter} from 'react-bootstrap-icons';
+import { register, reset } from '../features/auth/authSlice'
+import { Facebook, Google, Apple, Twitter } from 'react-bootstrap-icons';
 import Spinner from '../components/Spinner'
 import '../App.css';
 
 function Register() {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        password2: ''
-    })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    password2: ''
+  })
 
-    const { name, email, password, password2 } = formData
+  const { name, email, password, password2 } = formData
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
-    const {user , isLoading , isError , isSuccess , message} = useSelector((state) => state.auth)
+  const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth)
 
-    useEffect(() => {
-        if(isError){
-            toast.error(message)
-        }
-
-        if(isSuccess || user){
-            navigate('/login')
-        }
-
-        dispatch(reset())
-
-    }, [ user, isError , isSuccess, message, navigate, dispatch])
-
-    
-
-    const onChange = (e) => {
-        setFormData((prevState) => ({
-            ...prevState,
-            [e.target.name]: e.target.value
-        }))
+  useEffect(() => {
+    if (isError) {
+      toast.error(message)
     }
 
-    const onSubmit = (e) => {
-        e.preventDefault()
-        if(password !== password2){
-            toast.error('Password do not match')
-        }else{
-            const userData = {
-                name,
-                email,
-                password
-            }
-
-            dispatch(register(userData))
-            .catch(error => {
-                toast.error(error.message)
-            });
-        }
+    if (isSuccess || user) {
+      navigate('/login')
     }
 
-    if(isLoading){
-        return <Spinner/>
+    dispatch(reset())
+
+  }, [user, isError, isSuccess, message, navigate, dispatch])
+
+
+
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    if (password !== password2) {
+      toast.error('Password do not match')
+    } else {
+      const userData = {
+        name,
+        email,
+        password
+      }
+
+      dispatch(register(userData))
+        .catch(error => {
+          toast.error(error.message)
+        });
     }
+  }
+
+  if (isLoading) {
+    return <Spinner />
+  }
 
 
 
 
   return (
     <>
-        {/* <section className='heading'>
-            <h1>
-                <FaUser/>Register
-            </h1>
-            <p>Please create an account</p>
-        </section>
-
-        <section className="form">
-            <form onSubmit={onSubmit}>
-                <div className="form-group">
-                <input 
-                    type="text" 
-                    className="form-control" 
-                    id='name' 
-                    name='name' 
-                    value={name} 
-                    placeholder='Enter Your Name' 
-                    onChange={onChange}
-                />
-                </div>
-                <div className="form-group">
-                <input
-                    type="email"
-                    className="form-control"
-                    id='email'
-                    name='email'
-                    value={email}
-                    placeholder='Enter Your Email'
-                    onChange={onChange}
-                />
-                </div>
-                <div className="form-group">
-                <input
-                    type="password"
-                    className="form-control"
-                    id='password'
-                    name='password'
-                    value={password}
-                    placeholder='Enter Your Password'
-                    onChange={onChange}
-                />
-                </div>
-                <div className="form-group">
-                <input
-                    type="password"
-                    className="form-control"
-                    id='password2'
-                    name='password2'
-                    value={password2}
-                    placeholder='Confirm Your Password'
-                    onChange={onChange}
-                />
-                </div>
-                <div className="form-group">
-                    <button type="submit" className="btn btn-block">Register</button>
-                </div>
-            </form>
-        </section> */}
-
-<section className="login__Container ">
+      <section className="login__Container ">
         <div className="login__Container__heading">
           <h1>
             Register
           </h1>
-          <p>Register and Enjoy Your <span style={{color: "#25D366"}}>Dream Holiday</span></p>
+          <p>Register and Enjoy Your <span style={{ color: "#25D366" }}>Dream Holiday</span></p>
         </div>
 
         <div className="">
@@ -163,48 +104,48 @@ function Register() {
 
                 {/* Name Input */}
                 <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form3Example3">Name</label>
-                    <input id='name'
-                        name='name'
-                        value={name} className="form-control form-control-lg"
-                        placeholder="Enter Your Name"
-                        onChange={onChange}
-                    />
+                  <label className="form-label" htmlFor="form3Example3">Name</label>
+                  <input id='name'
+                    name='name'
+                    value={name} className="form-control form-control-lg"
+                    placeholder="Enter Your Name"
+                    onChange={onChange}
+                  />
                 </div>
 
                 {/* Email input */}
                 <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form3Example3">Email address</label>
-                    <input id='email'
-                        name='email'
-                        value={email} className="form-control form-control-lg"
-                        placeholder="Enter a valid email address"
-                        onChange={onChange}
-                    />
+                  <label className="form-label" htmlFor="form3Example3">Email address</label>
+                  <input id='email'
+                    name='email'
+                    value={email} className="form-control form-control-lg"
+                    placeholder="Enter a valid email address"
+                    onChange={onChange}
+                  />
                 </div>
 
                 {/* <!-- Password input --> */}
                 <div className="form-outline mb-3">
-                    <label className="form-label" htmlFor="form3Example4">Password</label>
-                    <input type="password"
-                        id='password'
-                        name='password'
-                        value={password} className="form-control form-control-lg"
-                        placeholder="Enter password"
-                        onChange={onChange}
-                    />
+                  <label className="form-label" htmlFor="form3Example4">Password</label>
+                  <input type="password"
+                    id='password'
+                    name='password'
+                    value={password} className="form-control form-control-lg"
+                    placeholder="Enter password"
+                    onChange={onChange}
+                  />
                 </div>
 
                 {/* <!-- Password input --> */}
                 <div className="form-outline mb-3">
-                    <label className="form-label" htmlFor="form3Example4">Confirm Password</label>
-                    <input type="password"
-                        id='password2'
-                        name='password2'
-                        value={password2} className="form-control form-control-lg"
-                        placeholder="Confirm password"
-                        onChange={onChange}
-                    />
+                  <label className="form-label" htmlFor="form3Example4">Confirm Password</label>
+                  <input type="password"
+                    id='password2'
+                    name='password2'
+                    value={password2} className="form-control form-control-lg"
+                    placeholder="Confirm password"
+                    onChange={onChange}
+                  />
                 </div>
 
                 <div className="d-flex text-center text-lg-start mt-4 pt-2">
