@@ -25,7 +25,7 @@ function Header() {
 
     return(
         
-       
+       <div className="header">
       <nav className="navbar navbar-expand-md navbar-dark">
       <div className="container-fluid">
         <a className="navbar-brand fw-bold" href="/"><span style={{color: "#25D366"}}>Hela Travels</span></a>
@@ -102,6 +102,8 @@ function Header() {
       </div>
       
     </nav>
+    <hr style = {{color: "#25D366"}} ></hr>
+    </div>
  
 
     
