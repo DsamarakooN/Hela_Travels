@@ -3,7 +3,7 @@ import AddDrivers from "./components/AddDrivers";
 import UpdateDriver from './components/UpdateDriver';
 import AllDrivers from "./components/AllDrivers";
 import DriverTable from './components/DriverTable';
-import Home from "./components/Home";
+import Home from './pages/Home';
 import Viewmore from './components/ViewMore';
 import Register from './pages/Register';
 import Login from './pages/Login';

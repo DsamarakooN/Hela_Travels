@@ -37,7 +37,19 @@ body::-webkit-scrollbar-track {
   }
   .sm-icons {
     display: flex;
+    justify-content: center;
   }
+
+  .footer-social{
+    display : inline-flex;
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .fs-icon{
+    padding: 0px 15px 0px 15px;
+  }
+
   .sm-icons .nav-link {
     padding-right: 1em;
   }
@@ -55,6 +67,7 @@ body::-webkit-scrollbar-track {
   .navbar-nav .nav-link {
     font-weight: 600;
     font-size: 1.1em;
+    padding-left: 0px;
 
     color: black;
 
@@ -92,6 +105,13 @@ body::-webkit-scrollbar-track {
       max-height: 300px !important;
     }
   }
+
+  /* .hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  } */
 
 
   /* Drivers cards */
@@ -259,3 +279,4 @@ body::-webkit-scrollbar-track {
 .btn:hover {
   transform: scale(0.98);
 }
+

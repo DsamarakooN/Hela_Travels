@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Facebook, Instagram, Twitter, Pinterest } from 'react-bootstrap-icons';
 
 const Styles = styled.div`
   .footer {
@@ -20,13 +21,7 @@ function Footer() {
             <div className="col-md-6 mt-md-0 mt-3">
             <a className="navbar-brand fw-bold fst-italic fs-2" href="#" style={{color:"#25D366"}}>Hela Travels</a>
             
-            <div class="container ">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-skype"></i></a>
-            </div>
+            
 
                 
             </div>
@@ -55,11 +50,21 @@ function Footer() {
                     <li><a href="#!"style={{color:"black"}}>Contact us</a></li>
                 </ul>
             </div>
+
         </div>
     </div>
 
-    <div className="footer-copyright text-center py-3">© 2022 Copyright:
-        <a href="https://mdbootstrap.com/"> SerendibExplorers</a>
+    <div className="footer-copyright text-center py-3">© 2023 Copyright:
+        <a href="#"> Hela Travels </a>
+        <div class="sm-icons ">
+                    
+            <ul className="sm-icons footer-social">
+            <li><a className="fs-icon" href="#"><Facebook className="icon"  size={20} /></a></li>
+            <li><a className="fs-icon" href="#"><Instagram className="icon"  size={20}/></a></li>
+            <li><a className="fs-icon" href="#"><Twitter className="icon"  size={20}/></a></li>
+            <li><a className="fs-icon" href="#"><Pinterest className="icon"  size={20}/></a></li>
+          </ul>
+            </div>
     </div>
 
 </footer>
