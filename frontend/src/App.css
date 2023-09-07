@@ -246,7 +246,7 @@ body::-webkit-scrollbar-track {
   margin: 0 0 5px 3px;
 }
 
-.btn {
+.btn1 {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
@@ -262,21 +262,69 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 
-.btn svg {
+.btn1 svg {
   margin-right: 8px;
 }
 
-.btn-reverse {
+.btn1-reverse {
   background: #fff;
   color: #000;
 }
 
-.btn-block {
+.btn1-block {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.btn:hover {
+.btn1:hover {
   transform: scale(0.98);
 }
 
+
+/* login page */
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: 90vh;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+.login__Container{
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.text-body{
+  font-size: 1 em;
+  font-weight: 400;
+}
+
+.login__Container__heading{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__Container__heading h1{
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 0 20px;
+}
