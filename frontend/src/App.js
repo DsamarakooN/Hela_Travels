@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import './App.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Profile from './pages/UpdateProfile';
+import ProfileDetails from './pages/ProfileDetails';
 
 
 
@@ -34,6 +36,8 @@ function App() {
             <Route path = '/all/view/:id' element={<Viewmore/>} />
             <Route path = '/register' element={<Register/>} /> 
             <Route path = '/login' element={<Login/>} />
+            <Route path = '/updateprofile' element={<Profile/>} />
+            <Route path = '/profile' element={<ProfileDetails/>} />
           </Routes>
 
         <Footer/>

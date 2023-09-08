@@ -90,6 +90,34 @@ const getUserProfile = asyncHandler(async (req, res) => {
     res.status(200).json(req.user)
 })
 
+// @desc Update user profile
+// @route PUT /api/users/profile
+// @access private
+const updateUserProfile = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.user._id)
+
+    if (user) {
+        user.name = req.body.name || user.name
+        user.email = req.body.email || user.email
+        user.role = req.body.role || user.role
+        user.businessType = req.body.businessType || user.businessType
+        
+        const updatedUser = await user.save()
+
+        res.status(200).json({
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            role: updatedUser.role,
+            businessType: updatedUser.businessType,
+            token: generateToken(updatedUser._id)
+        })
+    } else {
+        res.status(404)
+        throw new Error('User not found')
+    }
+})
+
 // generate jwt
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' })
@@ -98,5 +126,6 @@ const generateToken = (id) => {
 module.exports = {
     registerUser,
     loginUser,
-    getUserProfile
+    getUserProfile,
+    updateUserProfile
 }

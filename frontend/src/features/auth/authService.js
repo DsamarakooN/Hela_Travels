@@ -35,10 +35,32 @@ const logout = () => {
     }
   }
 
+
+// update user profile
+const updateProfile = async (userData) => {
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const config = {
+      headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${user.token}`,
+      },
+  }
+
+  const response = await axios.put(API_URL + 'profile', userData, config)
+
+  if (response.data) {
+      localStorage.setItem('user', JSON.stringify(response.data));
+  }
+
+  return response.data;
+}
+
 const authService = {
     register,
     logout,
-    login
+    login,
+    updateProfile
 }
 
 export default authService;
