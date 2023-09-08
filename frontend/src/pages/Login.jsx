@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { Facebook, Google, Apple, Twitter} from 'react-bootstrap-icons';
+import Swal from 'sweetalert2'
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -28,6 +29,13 @@ function Login() {
     }
 
     if (isSuccess || user) {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Login Success',
+        showConfirmButton: false,
+        timer: 1500
+      })
       navigate('/')
     }
 

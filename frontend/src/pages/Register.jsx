@@ -7,6 +7,7 @@ import { logout, register, reset } from '../features/auth/authSlice'
 import { Facebook, Google, Apple, Twitter } from 'react-bootstrap-icons';
 import Spinner from '../components/Spinner'
 import '../App.css';
+import Swal from 'sweetalert2'
 
 function Register() {
 
@@ -30,6 +31,13 @@ function Register() {
     }
 
     if (isSuccess || user) {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Registration Success',
+        showConfirmButton: false,
+        timer: 1500
+      })
       dispatch(logout());
       navigate('/login')
     }

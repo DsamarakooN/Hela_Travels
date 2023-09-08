@@ -5,6 +5,7 @@ import { updateProfile } from '../features/auth/authSlice'
 import { FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import Swal from 'sweetalert2'
 
 function UpdateProfile() {
   const dispatch = useDispatch()
@@ -18,21 +19,47 @@ function UpdateProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to update your profile?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#25D366',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, update it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(
+          updateProfile({
+            name,
+            email,
+            role,
+            businessType
+          })
+          
+        ).then(() => {
+          // toast.success('Profile updated successfully')
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Profile updated successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          navigate('/profile')
+        }).catch((error) => {
+          toast.error(error.message)
+        })
+    
 
-    dispatch(
-      updateProfile({
-        name,
-        email,
-        role,
-        businessType
-      })
-      
-    ).then(() => {
-      toast.success('Profile updated successfully')
-      navigate('/profile')
-    }).catch((error) => {
-      toast.error(error.message)
+      }
     })
+
+
+
+
+    
+  
   }
 
   return (
