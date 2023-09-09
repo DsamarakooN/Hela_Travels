@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8070/api/users/';
+const API_URL = 'https://hela-travels.onrender.com/api/users/';
 
 //register user
 const register = async (userData) => {

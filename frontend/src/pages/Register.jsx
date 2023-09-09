@@ -93,7 +93,7 @@ function Register() {
         <div className="">
           <div className="row d-flex justify-content-center align-items-center h-10">
             <div className="col-md-9 col-lg-6 col-xl-5">
-              <img src="./images/login.png"
+              <img src="./images/login-min.png"
                 className="img-fluid" alt="Sample image" />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
