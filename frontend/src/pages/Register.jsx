@@ -77,9 +77,6 @@ function Register() {
     return <Spinner />
   }
 
-
-
-
   return (
     <>
       <section className="login__Container ">
@@ -104,7 +101,6 @@ function Register() {
                   <a className="fs-icon" href="#"><Google className="icon" size={32} /></a>
                   <a className="fs-icon" href="#"><Twitter className="icon" size={32} /></a>
                   <a className="fs-icon" href="#"><Apple className="icon" size={32} /></a>
-
                 </div>
 
                 <div className="divider d-flex align-items-center my-4">
