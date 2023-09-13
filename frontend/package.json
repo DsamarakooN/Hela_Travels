@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env NODE_ENV=production OTHERFLAG=myValue webpack --config build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production OTHERFLAG=myValue webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -54,6 +54,9 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "cross-env": "^7.0.3",
+    "webpack-cli": "^5.1.4"
   }
 }
