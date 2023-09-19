@@ -21,11 +21,8 @@ function App() {
   return (
     <>
     <Router>
-      
-
         <Header/>
         
-      
           <Routes>
             <Route path='/add' element={<AddDrivers/>} />
             <Route path='/update/:id' element = {<UpdateDriver/>} />
