@@ -28,7 +28,7 @@ const createGuide = asyncHandler(async (req, res) => {
         }
 
         const guide = await Guide.create({
-            user: req.user.id,
+            user: req.user._id,
             guideName,
             guideEmail,
             guidePhone,
