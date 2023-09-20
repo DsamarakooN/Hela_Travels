@@ -11,6 +11,14 @@ const guideSchema = new Schema({
         type: String,
         required: true
     },
+    guideEmail: {
+        type: String,
+        required: true
+    },
+    guidePhone: {
+        type: String,
+        required: true
+    },
     guideDescription: {
         type: String,
         required: true
