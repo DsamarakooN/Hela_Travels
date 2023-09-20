@@ -22,6 +22,7 @@ connectDB();
 
 app.use('/api/users', require('./routes/userRoutes.js'))
 app.use("/api/drivers", require("./routes/driverRoutes.js"))
+app.use("/api/guides", require("./routes/guideRoutes.js"))
 
 app.use(errorHandler);
 
