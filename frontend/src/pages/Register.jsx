@@ -81,10 +81,10 @@ function Register() {
     <>
       <section className="login__Container ">
         <div className="login__Container__heading">
-          <h1>
+          <h1 className='login_header'>
             Register
           </h1>
-          <p>Register and Enjoy Your <span style={{ color: "#25D366" }}>Dream Holiday</span></p>
+          <p className='login_quote'>Register and Enjoy Your <span style={{ color: "#25D366" }}>Dream Holiday</span></p>
         </div>
 
         <div className="">
@@ -95,12 +95,12 @@ function Register() {
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
               <form>
-                <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start fd-column">
                   <p className="lead fw-normal mb-0 me-3">Register with</p>
-                  <a className="fs-icon" href="#"><Facebook className="icon" size={32} /></a>
-                  <a className="fs-icon" href="#"><Google className="icon" size={32} /></a>
-                  <a className="fs-icon" href="#"><Twitter className="icon" size={32} /></a>
-                  <a className="fs-icon" href="#"><Apple className="icon" size={32} /></a>
+                  <a className="fs-icon" href="#"><Facebook className="icon" size={24} /></a>
+                  <a className="fs-icon" href="#"><Google className="icon" size={24} /></a>
+                  <a className="fs-icon" href="#"><Twitter className="icon" size={24} /></a>
+                  <a className="fs-icon" href="#"><Apple className="icon" size={24} /></a>
                 </div>
 
                 <div className="divider d-flex align-items-center my-4">

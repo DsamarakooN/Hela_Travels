@@ -5,7 +5,8 @@ import "../App.css"
 import { Nav } from 'react-bootstrap';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { logout, reset } from '../features/auth/authSlice'
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { FaSignInAlt, FaArrowRight, FaUser, FaAlignJustify  } from 'react-icons/fa'
+
 
 
 
@@ -24,20 +25,20 @@ function Header() {
   }
 
   return (
-
+    
     <div className="header">
-      <nav className="navbar navbar-expand-md navbar-dark">
+      <nav className="navbar navbar-expand-md ">
         <div className="container-fluid">
           <a className="navbar-brand fw-bold" href="/"><span style={{ color: "#25D366" }}>Hela Travels</span></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"><a className="fs-icon" href="#"><FaAlignJustify className="icon" size={24} /></a></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <Nav.Item>
 
                 <NavLink to='/' className={`${location.pathname === "/" ? 'active-nav-link' : ''}`}>Home</NavLink>
-
+                
               </Nav.Item>
 
               <Nav.Item className="nav-item">

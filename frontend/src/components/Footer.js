@@ -2,19 +2,11 @@ import React from "react";
 import styled from 'styled-components';
 import { Facebook, Instagram, Twitter, Pinterest } from 'react-bootstrap-icons';
 
-const Styles = styled.div`
-  .footer {
-    background-color: #D9D9D9;
-  }
 
-`;
 
 function Footer() {
 
     return (
-    <section className="footer">
-        <Styles>
-            <hr className="clearfix w-100 d-md-none pb-0 " />
             <footer className="page-footer font-small blue pt-4 bg-opacity-10">
                 <hr style={{ color: "#25D366" }} ></hr>
                 <div className="container-fluid text-center text-md-left">
@@ -62,8 +54,6 @@ function Footer() {
                 </div>
 
             </footer>
-        </Styles>
-    </section>
     )
 }
 
