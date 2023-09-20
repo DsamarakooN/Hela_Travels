@@ -35,7 +35,7 @@ export default function AddDrivers(){
         }
         console.log(newDriver);
 
-        axios.post("http://localhost:8070/api/drivers/add", newDriver).then((res)=>{
+        axios.post("https://hela-travels.onrender.com/api/drivers/add", newDriver).then((res)=>{
             alert("Driver Added")
             console.log(res.data)
             Navigate(`/add`)
