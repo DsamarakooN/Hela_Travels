@@ -14,6 +14,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from './pages/UpdateProfile';
 import ProfileDetails from './pages/ProfileDetails';
+import AllGuides from './pages/guides/AllGuides';
+import AddGuides from './pages/guides/AddGuide';
 
 
 
@@ -35,6 +37,9 @@ function App() {
             <Route path = '/login' element={<Login/>} />
             <Route path = '/updateprofile' element={<Profile/>} />
             <Route path = '/profile' element={<ProfileDetails/>} />
+
+            <Route path='/guides' element={<AllGuides/>} />
+            <Route path='/guides/add' element={<AddGuides/>} />
           </Routes>
 
         <Footer/>

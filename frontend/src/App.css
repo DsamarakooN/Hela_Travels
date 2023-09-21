@@ -381,3 +381,15 @@ height: 90vh;
     flex-direction: column;
   }
   }
+
+
+  .addGuide__Container{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    height: 720px;
+    width: 80%;
+    border: #8e8d8d 1px solid;
+    border-radius: 10px;
+  }

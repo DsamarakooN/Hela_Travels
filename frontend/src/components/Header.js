@@ -5,7 +5,7 @@ import "../App.css"
 import { Nav } from 'react-bootstrap';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { logout, reset } from '../features/auth/authSlice'
-import { FaSignInAlt, FaArrowRight, FaUser, FaAlignJustify  } from 'react-icons/fa'
+import { FaSignInAlt, FaUser, FaAlignJustify  } from 'react-icons/fa'
 
 
 
@@ -59,7 +59,7 @@ function Header() {
               </Nav.Item>
               <Nav.Item>
 
-                <NavLink to='/contact' className={`${location.pathname === "/contact" ? 'active-nav-link' : ''}`}>Guides</NavLink>
+                <NavLink to='/guides' className={`${location.pathname === "//guides" ? 'active-nav-link' : ''}`}>Guides</NavLink>
 
               </Nav.Item>
               <Nav.Item>
