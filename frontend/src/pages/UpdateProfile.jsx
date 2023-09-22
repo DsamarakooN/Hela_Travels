@@ -50,16 +50,8 @@ function UpdateProfile() {
         }).catch((error) => {
           toast.error(error.message)
         })
-    
-
       }
     })
-
-
-
-
-    
-  
   }
 
   return (
@@ -84,13 +76,7 @@ function UpdateProfile() {
                       value={email} onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  {/* <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form3Example3">Role</label>
-                    <input type="text" id="role" className="form-control form-control-lg"
-                      value={role} onChange={(e) => setRole(e.target.value)}
-                    />
-                  </div> */}
-
+              
                   <div className="form-outline mb-4" >
                     <label className="form-label">User Mode</label>
                     <div>
