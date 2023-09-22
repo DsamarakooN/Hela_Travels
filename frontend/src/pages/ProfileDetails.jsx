@@ -52,21 +52,13 @@ function ProfileDetails() {
                             />
                         </div>
                     )}
-
-
                     <Link to="/updateprofile" className="btn btn-success btn-lg btn-block">Update Profile</Link>
-
                 </div>
                 </div>
             </div>
             </div>
         </div>
         </section>
-
-
-        
-
-    
     </>
   )
 }

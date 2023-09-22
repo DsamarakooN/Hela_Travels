@@ -79,9 +79,6 @@ function AddGuide() {
 
               {/* Guide image input */}
               <div className="image__upload__container">
-                {/* <label for="guideImage" className="form-label">Upload your image</label>
-            <input type="file" className="form-control" id="guideImage" aria-describedby="guideImageHelp" /> */}
-
                 <Form.Group controlId="formGuideImage">
 
                   <Form.Control type="file" onChange={handleImageChange} hidden />
