@@ -13,10 +13,12 @@ function ProfileDetails() {
             <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
-                <div className="card-body p-5 text-center">
+                <div className="card-body p-5">
+                    <div className="text-center">
 
                     <h1 className="mb-0"><FaUser /></h1>
                     <h2 className="mb-5">Profile</h2>
+                    </div>
                     
 
                     <div className="form-outline mb-4">
@@ -36,7 +38,7 @@ function ProfileDetails() {
                     </div>
 
                     <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form3Example3">Role</label>
+                    <label className="form-label" htmlFor="form3Example3">User Mode</label>
                     <input type="text" id="role" className="form-control form-control-lg"
 
                         value={user.role} disabled

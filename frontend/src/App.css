@@ -479,21 +479,104 @@ height: 90vh;
   
   .remove-image-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 50%;
-  }
-  
-  .remove-image-button {
-    padding: 5px;
+    height: 30px;
+    width: 30px;
   }
   
   .remove-image-button:hover {
     background-color: #25D366;
   }
+
+/* GUIDE CARD */
+
+.guide__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.allGuidePage__heading h1{
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+
+.guideCards__container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+.guideCards {
+  margin: 15px 10px 15px 10px;
+  /* text-align: center; */
+  display: -webkit-flex;
+  display: inline-block;
+  border-radius: 10px;
+  -webkit-justify-content: center; 
+  justify-content: center;
+  -webkit-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin-top: 0px;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.guideCards:hover {
+  box-shadow: 0 4px 10px rgba(104, 230, 76, 0.54), 0 4px 10px rgba(104, 230, 76, 0.85);
+}
+
+.guideCards-body {
+  margin: 10px;
+}
+
+.guideCards-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.guideCard-details{
+  margin-top: 15px;
+  padding: 5px;
+  margin-bottom: 15px; 
+}
+
+.guideCard-details h4{
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.guideCard-details p{
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
 
   

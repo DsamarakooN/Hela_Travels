@@ -1,11 +1,15 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector,useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { createGuide } from '../../features/guides/guideSlice'
 import Form from 'react-bootstrap/Form'
 import Image from 'react-bootstrap/Image'
 import { FaImage, FaUpload } from 'react-icons/fa'
-import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import storage from '../../firebaseConfig'
+import Spinner from '../../components/Spinner'
+
 
 function AddGuide() {
 
@@ -17,7 +21,21 @@ function AddGuide() {
   const [guideDescription, setGuideDescription] = React.useState("");
   const [guideImage, setGuideImage] = React.useState("");
 
+  //to get the current user details from local storage
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  //to set form name and email to the current user name and email
+  useEffect(() => {
+    setGuideName(user.name)
+    setGuideEmail(user.email)
+  }, [user]);
+  
   const dispatch = useDispatch()
+  const Navigate = useNavigate()
+
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.guide
+  )
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,40 +49,76 @@ function AddGuide() {
       guideImage
     };
 
-    dispatch(createGuide(guide));
-
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Guide added successfully',
-      showConfirmButton: false,
-      timer: 1500
-    })
-
+    dispatch(
+      createGuide(
+        guide
+    )).then(() => {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Guide added successfully',
+        showConfirmButton: false,
+        timer: 1500
+      }).finally(() => {
+      Navigate('/guides')
+      })
+    }).catch((error) => {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Error',
+        text: error.message,
+        showConfirmButton: false,
+        timer: 1500
+      })
+    });
   };
 
   // Initialize state to hold the image
   const [image, setImage] = React.useState(null)
 
   // Function to handle image selection
-  const handleImageChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      setImage(URL.createObjectURL(e.target.files[0]))
-      setGuideImage(URL.createObjectURL(e.target.files[0]))
+  const handleImageChange = async (event) => {
+    if (event.target.files && event.target.files[0]) {
+        const file = event.target.files[0];
+        const fileName = file.name;
+        const storageRef = ref(storage, `images/${fileName}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+
+        const downloadURL = await new Promise((resolve, reject) => {
+            uploadTask.on(
+                "state_changed",
+                (snapshot) => {
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log("Upload progress:", progress.toFixed(2));
+                },
+                (error) => {
+                    reject(error);
+                },
+                async () => {
+                    const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+                    resolve(downloadURL);
+                }
+            );
+        });
+
+        setImage(URL.createObjectURL(event.target.files[0]));
+        setGuideImage(downloadURL);
     }
-  }
+};
   // Function to remove the image
   const handleImageRemove = () => {
     setImage(null)
   }
 
-  const { reset } = useForm();
-
   const handleCancel = () => {
-    reset();
+    Navigate('/guides')
   }
-    
-  
+
+  if (isLoading) {
+    return <Spinner />
+  }
+
   return (
     <section className='addGuide__Container'>
       <div className='addGuide__Container__heading'>
@@ -87,7 +141,7 @@ function AddGuide() {
                         placeholder="Enter guide name" 
                         required 
                         value={guideName} 
-                        onChange={e => setGuideName(e.target.value)} 
+                        disabled
                   />
                 </Form.Group>
               </div>
@@ -101,7 +155,7 @@ function AddGuide() {
                         placeholder="Enter email" 
                         required 
                         value={guideEmail}
-                        onChange={e => setGuideEmail(e.target.value)}      
+                        disabled      
                   />
                 </Form.Group>
               </div>
@@ -188,7 +242,7 @@ function AddGuide() {
           <div className='registration__submit_btn '>
 
             <button type="submit" class="btn btn-outline-success btn-long " >Submit</button>
-            <button type="button" class="btn btn-outline-danger btn-long " onClick='/guides' >Cancel</button>
+            <button type="button" class="btn btn-outline-danger btn-long " onClick={handleCancel} >Cancel</button>
 
           </div>
 
