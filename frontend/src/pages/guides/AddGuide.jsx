@@ -7,8 +7,6 @@ import { FaImage, FaUpload } from 'react-icons/fa'
 import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
 
-
-
 function AddGuide() {
 
   // fuction to dispatch the createGuide action
