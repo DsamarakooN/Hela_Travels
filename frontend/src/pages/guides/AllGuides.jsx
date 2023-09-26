@@ -82,7 +82,7 @@ const AllGuides = () => {
                     <div className="card guideCards " key={guides._id} style={{ width: '20rem' }} >
                     <div className="guideCards-body">
                         <div className="guideCards-image">
-                        <img src={guides.guideImage} alt="Driver Image" className="card-img" />
+                        <img src={guides.guideImage} alt="driver" className="card-img" />
                         </div>
                         <div className="guideCard-details">
                         <h4 className="card-title">{guides.guideName}</h4>

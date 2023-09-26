@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css"
+import { FaBed, FaUserTie , FaHotel   } from 'react-icons/fa'
 // import Tab from 'react-bootstrap/Tab';
 // import Tabs from 'react-bootstrap/Tabs';
 
@@ -92,22 +93,54 @@ function Home() {
 
 
         </div>
-
-
-
       </section>
 
-      {/* <div class="hero d-sm-flex justify-align-content-center  row g-0" >
-      <div className="d-sm-flex mx-auto items-center align-items-center justify-content-between w-100" style={{ height: "90vh" }}>
-        <div className="col-md-4 mx-auto mb-4 mb-sm-0 headline">
-          <span className="text-secondary text-uppercase">Hela Travels</span>
-          <h1 className="display-4 my-4 font-weight-bold">Enjoy Your <br></br> <span style={{ color: "#25D366" }}>dream holiday</span></h1>
-          <a href="#" className="hero_btn px-5 py-3 text-white mt-3 mt-sm-0" style={{ borderRadius: "30px", backgroundColor: "#25D366" }}>Let's go</a>
+      <section className="services-section">
+        <div className="services-container">
+          <div className="service-heading">
+            <h2>Our Services</h2>
+          </div>
+          <div className="services-content">
+          <div className="service">
+            <div className="service-image">
+              <FaBed className="icon" size={64} />
+            </div>
+            <div className="service-content">
+              <h3>Accommodations</h3>
+              <h4>Discover Premier Stays</h4>
+              <p>Find unparalleled luxury with our Accommodations service. 
+                From charming boutique hotels to stunning beachfront villas.We ensur each night of your journey 
+                is as exceptional as your days of exploration.</p>
+            </div>
+          </div>
+          <div className="service">
+            <div className="service-image">
+                <FaHotel className="icon" size={64} />
+            </div>
+            <div className="service-content">
+              <h3>Travel Packages</h3>
+              <h4>Exclusive Travel Deals Await</h4>
+              <p>Elevate your travel experiences with our curated Travel Packages. Enjoy exclusive
+                 deals and expertly crafted itineraries that guarantee unforgettable adventures, 
+                 whether you're a solo traveler, a couple, or a family.</p>
+            </div>
+            </div>
+            <div className="service">
+            <div className="service-image">
+                <FaUserTie className="icon" size={64} />
+            </div>
+            <div className="service-content">
+              <h3>Expert Guides</h3>
+              <h4>Personalized Local Guided Experiences</h4>
+              <p>Enhance your journey with the expertise of our local guides. 
+                These passionate individuals provide personalized insights, helping 
+                you discover the heart of each destination and make 
+                your trip truly memorable.</p>
+              </div>
+              </div>
+              </div>
         </div>
-        <div className="col-md-8 h-100 clipped" style={{ minHeight: "200px", backgroundImage: "url(./images/hero.jpg)", backgroundPosition: "center", backgroundSize: "cover" }}>
-        </div>
-      </div>
-    </div>  */}
+      </section>
     </>
   )
 
