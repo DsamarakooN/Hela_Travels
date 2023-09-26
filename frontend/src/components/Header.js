@@ -59,7 +59,7 @@ function Header() {
               </Nav.Item>
               <Nav.Item>
 
-                <NavLink to='/guides' className={`${location.pathname === "//guides" ? 'active-nav-link' : ''}`}>Guides</NavLink>
+                <NavLink to='/guides' className={`${location.pathname === "/guides" ? 'active-nav-link' : ''}`}>Guides</NavLink>
 
               </Nav.Item>
               <Nav.Item>
