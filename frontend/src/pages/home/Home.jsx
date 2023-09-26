@@ -27,9 +27,65 @@ function Home() {
                   </ul>
                 </div>
                 <div className="tab-content-holder">
-                  <div className={`${selectedTab === 0 ? "tab-content-active" : "tab-content"}`}><p>Hotel content </p></div>
-                  <div className={`${selectedTab === 1 ? "tab-content-active" : "tab-content"}`}><p>Guide content</p></div>
-                  <div className={`${selectedTab === 2 ? "tab-content-active" : "tab-content"}`}><p>Package content</p></div>
+                  <div className={`${selectedTab === 0 ? "tab-content-active" : "tab-content"}`}>
+
+                    <div className="hotel-filters">
+                      <div className="hotel-filter">
+                        <label htmlFor="location">Location</label>
+                        <input type="text" name="location" id="location" placeholder="Where are you going?" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-in">Check-in</label>
+                        <input type="date" name="check-in" id="check-in" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-out">Check-out</label>
+                        <input type="date" name="check-out" id="check-out" />
+                      </div>
+                      <div className="hotel-filter">
+                        <button className="btn btn-outline-success">Search</button>
+                      </div>
+            
+                    </div>
+                  </div>
+                  <div className={`${selectedTab === 1 ? "tab-content-active" : "tab-content"}`}>
+                  <div className="hotel-filters">
+                      <div className="hotel-filter">
+                        <label htmlFor="location">Location</label>
+                        <input type="text" name="location" id="location" placeholder="Where are you going?" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-in">Start</label>
+                        <input type="date" name="check-in" id="check-in" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-out">End</label>
+                        <input type="date" name="check-out" id="check-out" />
+                      </div>
+                      <div className="hotel-filter">
+                        <button className="btn btn-outline-success">Search</button>
+                      </div>
+                      </div>
+                  </div>
+                  <div className={`${selectedTab === 2 ? "tab-content-active" : "tab-content"}`}>
+                  <div className="hotel-filters">
+                      <div className="hotel-filter">
+                        <label htmlFor="location">Language</label>
+                        <input type="text" name="location" id="location" placeholder="Language preference?" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-in">Start</label>
+                        <input type="date" name="check-in" id="check-in" />
+                      </div>
+                      <div className="hotel-filter">
+                        <label htmlFor="check-out">End</label>
+                        <input type="date" name="check-out" id="check-out" />
+                      </div>
+                      <div className="hotel-filter">
+                        <button className="btn btn-outline-success">Search</button>
+                      </div>
+                  </div>
+                  </div>
                 </div>
               </div>
           </div>

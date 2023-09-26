@@ -374,17 +374,17 @@ height: 90vh;
   }
 
   .skeleton1 {
-    background-color: #727070;
+    background-color: #000000;
     animation: skeleton-animation 2s infinite ease-in-out;
   }
 
   .skeleton2 {
-    background-color: #676666;
+    background-color: #000000;
     animation: skeleton-animation 2s infinite ease-in-out;
   }
 
   .skeleton3 {
-    background-color: #676666;
+    background-color: #000000;
     animation: skeleton-animation 2s infinite ease-in-out;
   }
 
