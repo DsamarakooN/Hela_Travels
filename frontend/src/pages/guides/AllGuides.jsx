@@ -1,7 +1,7 @@
 import React , { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getGuides } from '../../features/guides/guideSlice'
-import Spinner from '../../components/Spinner'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 
@@ -21,9 +21,9 @@ const AllGuides = () => {
 
     }, [dispatch]);
 
-    if (isLoading) {
-        return <Spinner />
-    }
+    // if (isLoading) {
+    //     return <Spinner />
+    // }
 
     //console.log(guides);
   
@@ -35,7 +35,8 @@ const AllGuides = () => {
         </div>
         
         <div className="guideCards__container">
-            {guides?.map((guides) => (
+            
+            {/* {guides?.map((guides) => (
                 <div className="card guideCards " key={guides._id} style={{ width: '20rem' }} >
                     <div className="guideCards-body">
                         <div className="guideCards-image">
@@ -53,7 +54,48 @@ const AllGuides = () => {
                         </center>
                     </div>
                 </div>
-            ))}
+            ))} */}
+
+{isLoading ? (
+              Array(10).fill().map((item, index) => (
+                <div className="card guideCards skeleton " key={index} style={{ width: '20rem' }}>
+                  <Skeleton height={200} />
+                  <div className="guideCards-body skeleton">
+                    <div className="guideCards-image skeleton1">
+                      <Skeleton height={100} width={100} circle={true} />
+                    </div>
+                    <div className="guideCard-details skeleton2">
+                      <h4 className="card-title"><Skeleton /></h4>
+                      <p className="card-text"><Skeleton /></p>
+                      <p><Skeleton /></p>
+                    </div>
+                    <div className="skeleton3">
+                    <center>
+                      <Skeleton width={100} />
+                    </center>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+                guides?.map((guides) => (
+                    <div className="card guideCards " key={guides._id} style={{ width: '20rem' }} >
+                    <div className="guideCards-body">
+                        <div className="guideCards-image">
+                        <img src={guides.guideImage} alt="Driver Image" className="card-img" />
+                        </div>
+                        <div className="guideCard-details">
+                        <h4 className="card-title">{guides.guideName}</h4>
+                        <p className="card-text">{guides.guidePhone}</p>
+                        <p><span class="badge bg-info text-dark ">{guides.guideExperience} years of experience</span></p>
+                        </div>
+                        <center>
+                        <Link to={"/#"}><button className='btn btn-outline-success mb-3'>View more</button></Link>
+                        </center>
+                    </div>
+                    </div>
+                ))
+                )}
 
         </div>
         

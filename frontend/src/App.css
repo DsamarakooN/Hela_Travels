@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
 
 hr {
     margin-top: 0;
+    margin-bottom: 0;
   }
   
   /* Style the scrollbar thumb */
@@ -365,6 +366,39 @@ height: 90vh;
   }
   }
 
+  /* Guide */
+
+  .skeleton {
+    background-color: #a5a5a5;
+    animation: skeleton-animation 2s infinite ease-in-out;
+  }
+
+  .skeleton1 {
+    background-color: #727070;
+    animation: skeleton-animation 2s infinite ease-in-out;
+  }
+
+  .skeleton2 {
+    background-color: #676666;
+    animation: skeleton-animation 2s infinite ease-in-out;
+  }
+
+  .skeleton3 {
+    background-color: #676666;
+    animation: skeleton-animation 2s infinite ease-in-out;
+  }
+
+  @keyframes skeleton-animation {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
 
   .addGuide__Container{
     display: flex;
