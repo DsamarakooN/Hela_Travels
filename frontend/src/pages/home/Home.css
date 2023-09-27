@@ -19,7 +19,6 @@
     z-index: -1;
 }
 
-
 .hero__content{
     font-family: "Poppins", sans-serif !important;
     width: 75%;
@@ -325,8 +324,8 @@
 }
 
 .about-image{
-    width: 40%;
-    height: 90%;
+    width: 35%;
+    height: 80%;
     background-image: url('../../../public/images/Galle.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -345,7 +344,7 @@
     
     position: absolute;
     right: 5%;
-    top: 11%;
+    top: 12%;
 }
 
 .about-content h2{
@@ -358,4 +357,48 @@
     font-size: 1.2rem;
     font-weight: 400;
     color: #1D1D1D;
+}
+
+@media (max-width: 450px) {
+    .about-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        
+        margin-top: 20px;
+        position: relative;
+    }
+    .about-image{
+        display: none;
+    }
+    .about-content{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../public/images/Galle.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-content h2{
+        font-size: 2rem;
+    }
+    .about-content p{
+        font-size: 1rem;
+        color:white;
+        text-shadow: 2px 2px 4px #000000;
+        padding: 5PX;
+    }
 }
