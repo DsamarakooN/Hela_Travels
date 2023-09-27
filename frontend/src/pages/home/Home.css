@@ -35,7 +35,7 @@
 
 .hero__content__header{
     position: absolute;
-    top: 7%;
+    top: 5%;
     left: 4%;
     width: 65%;
     height: 40%;
@@ -59,9 +59,9 @@
 
 /* tabs */
 .tab-container-inner{
-    background-color: whitesmoke;
+    background-color: rgb(219, 247, 219);
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 4%;
     width: 70%;
     height: 40%;
@@ -83,7 +83,7 @@
     cursor: pointer;
 }
 .tab-button{
-    background-color: whitesmoke;
+    background-color: rgb(219, 247, 219);
     border: none;
     padding: 20px 20px 5px 0px;
     
@@ -91,7 +91,7 @@
 
 
 .tab-button-active{
-    background-color: whitesmoke;
+    background-color: rgb(219, 247, 219);
     border: none;
     padding: 20px 20px 5px 0px;
     border-bottom: #25D366 2px solid;
@@ -134,7 +134,7 @@
     padding: 10px 5px;
     border: none;
     color: rgb(137, 137, 137);
-    background-color: whitesmoke ;
+    background-color: rgb(219, 247, 219);
 }
 
 @media (max-width: 450px) {
@@ -188,15 +188,15 @@
         position: absolute;
         top: 25%;
         left: 4%;
-        background: rgba(222, 222, 222, 0.5); 
+        background-color: rgb(197, 252, 197);; 
         font-size: 1.5rem;  
     }
     .tab-button{
-        background: rgba(222, 222, 222, 0.1);
+        background-color: rgb(197, 252, 197);;
         color: rgb(108, 108, 108);
     }
     .tab-button-active{
-        background: rgba(222, 222, 222, 0.1);
+        background-color: rgb(197, 252, 197);;
         color: rgb(0, 0, 0);
     }
     .hotel-filters label{
@@ -327,7 +327,6 @@
     margin-top: 20px;
     position: relative;
     margin-bottom: 40px;
-    
 }
 
 .about-image{
