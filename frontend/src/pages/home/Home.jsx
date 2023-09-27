@@ -1,9 +1,6 @@
 import React from "react";
 import "./Home.css"
-import { FaBed, FaUserTie , FaHotel, FaStar  } from 'react-icons/fa'
-import { Justify } from "react-bootstrap-icons";
-// import Tab from 'react-bootstrap/Tab';
-// import Tabs from 'react-bootstrap/Tabs';
+import { FaBed, FaUserTie, FaHotel, FaStar } from 'react-icons/fa';
 
 function Home() {
 
@@ -21,75 +18,75 @@ function Home() {
               <h3> Discover Your Dream Destinations with Us  </h3>
             </div>
             <div className="tab-container-inner">
-                <div className="tab-header">
-                  <ul className="header-list">
-                    <li><button className={`${selectedTab === 0 ? "tab-button-active" : "tab-button"}`} onClick={() => {setSelectedTab(0);}}>Hotels</button></li>
-                    <li><button className={`${selectedTab === 1 ? "tab-button-active" : "tab-button"}`} onClick={() => {setSelectedTab(1);}}>Packages</button></li>
-                    <li><button className={`${selectedTab === 2 ? "tab-button-active" : "tab-button"}`} onClick={() => {setSelectedTab(2);}}>Guides</button></li>
-                  </ul>
-                </div>
-                <div className="tab-content-holder">
-                  <div className={`${selectedTab === 0 ? "tab-content-active" : "tab-content"}`}>
+              <div className="tab-header">
+                <ul className="header-list">
+                  <li><button className={`${selectedTab === 0 ? "tab-button-active" : "tab-button"}`} onClick={() => { setSelectedTab(0); }}>Hotels</button></li>
+                  <li><button className={`${selectedTab === 1 ? "tab-button-active" : "tab-button"}`} onClick={() => { setSelectedTab(1); }}>Packages</button></li>
+                  <li><button className={`${selectedTab === 2 ? "tab-button-active" : "tab-button"}`} onClick={() => { setSelectedTab(2); }}>Guides</button></li>
+                </ul>
+              </div>
+              <div className="tab-content-holder">
+                <div className={`${selectedTab === 0 ? "tab-content-active" : "tab-content"}`}>
 
-                    <div className="hotel-filters">
-                      <div className="hotel-filter">
-                        <label htmlFor="location">Location</label>
-                        <input type="text" name="location" id="location" placeholder="Where are you going?" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-in">Check-in</label>
-                        <input type="date" name="check-in" id="check-in" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-out">Check-out</label>
-                        <input type="date" name="check-out" id="check-out" />
-                      </div>
-                      <div className="hotel-filter">
-                        <button className="btn btn-outline-success">Search</button>
-                      </div>
-            
+                  <div className="hotel-filters">
+                    <div className="hotel-filter">
+                      <label htmlFor="location">Location</label>
+                      <input type="text" name="location" id="location" placeholder="Where are you going?" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-in">Check-in</label>
+                      <input type="date" name="check-in" id="check-in" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-out">Check-out</label>
+                      <input type="date" name="check-out" id="check-out" />
+                    </div>
+                    <div className="hotel-filter">
+                      <button className="btn btn-outline-success">Search</button>
+                    </div>
+
+                  </div>
+                </div>
+                <div className={`${selectedTab === 1 ? "tab-content-active" : "tab-content"}`}>
+                  <div className="hotel-filters">
+                    <div className="hotel-filter">
+                      <label htmlFor="location">Location</label>
+                      <input type="text" name="location" id="location" placeholder="Where are you going?" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-in">Start</label>
+                      <input type="date" name="check-in" id="check-in" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-out">End</label>
+                      <input type="date" name="check-out" id="check-out" />
+                    </div>
+                    <div className="hotel-filter">
+                      <button className="btn btn-outline-success">Search</button>
                     </div>
                   </div>
-                  <div className={`${selectedTab === 1 ? "tab-content-active" : "tab-content"}`}>
+                </div>
+                <div className={`${selectedTab === 2 ? "tab-content-active" : "tab-content"}`}>
                   <div className="hotel-filters">
-                      <div className="hotel-filter">
-                        <label htmlFor="location">Location</label>
-                        <input type="text" name="location" id="location" placeholder="Where are you going?" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-in">Start</label>
-                        <input type="date" name="check-in" id="check-in" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-out">End</label>
-                        <input type="date" name="check-out" id="check-out" />
-                      </div>
-                      <div className="hotel-filter">
-                        <button className="btn btn-outline-success">Search</button>
-                      </div>
-                      </div>
-                  </div>
-                  <div className={`${selectedTab === 2 ? "tab-content-active" : "tab-content"}`}>
-                  <div className="hotel-filters">
-                      <div className="hotel-filter">
-                        <label htmlFor="location">Language</label>
-                        <input type="text" name="location" id="location" placeholder="Language preference?" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-in">Start</label>
-                        <input type="date" name="check-in" id="check-in" />
-                      </div>
-                      <div className="hotel-filter">
-                        <label htmlFor="check-out">End</label>
-                        <input type="date" name="check-out" id="check-out" />
-                      </div>
-                      <div className="hotel-filter">
-                        <button className="btn btn-outline-success">Search</button>
-                      </div>
-                  </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="location">Language</label>
+                      <input type="text" name="location" id="location" placeholder="Language preference?" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-in">Start</label>
+                      <input type="date" name="check-in" id="check-in" />
+                    </div>
+                    <div className="hotel-filter">
+                      <label htmlFor="check-out">End</label>
+                      <input type="date" name="check-out" id="check-out" />
+                    </div>
+                    <div className="hotel-filter">
+                      <button className="btn btn-outline-success">Search</button>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -146,7 +143,7 @@ function Home() {
           <div className="about-image"></div>
           <div className="about-content">
             <h2><span style={{ color: "#25D366" }}>About </span> Us</h2>
-            
+
             <p align="justify">Founded in 2021, Hela Travels is a travel company that specializes in providing
               personalized travel experiences. We are passionate about helping our clients
               discover the world in a way that is unique to them. We believe that travel is
@@ -156,121 +153,121 @@ function Home() {
               Whether you are looking for an adventure or a relaxing getaway, we have the
               perfect trip for you. Let us take care of all the details so you can focus on
               what matters most – enjoying your time away from home!</p>
-            
+
           </div>
         </div>
       </section>
 
       <section className="testimonials-section">
 
-      <div className="services-container">
+        <div className="services-container">
           <div className="service-heading">
             <h2><span style={{ color: "#25D366" }}>Happy</span> Testimonials</h2>
           </div>
           <div className="services-content">
             <div className="service">
               <div className="testimonials-image1">
-                
+
               </div>
               <div className="service-content">
                 <h3>Jane Smith</h3>
                 <h4>Enchanting Exploration</h4>
                 <div class="testimonials-ratings mb-3">
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+
                 </div>
-                <p>"Booking with Hela Travels was a game-changer for our family 
-                  vacation. The 'Enchanting Exploration' package allowed us to 
-                  discover hidden gems we would have never found on our own. From the 
-                  moment we touched down, the itinerary flowed seamlessly, and the local 
-                  guides made our experience truly enchanting. Thank you, Hela Travels, for 
+                <p>"Booking with Hela Travels was a game-changer for our family
+                  vacation. The 'Enchanting Exploration' package allowed us to
+                  discover hidden gems we would have never found on our own. From the
+                  moment we touched down, the itinerary flowed seamlessly, and the local
+                  guides made our experience truly enchanting. Thank you, Hela Travels, for
                   turning our vacation into a magical journey!"</p>
               </div>
             </div>
             <div className="service">
               <div className="testimonials-image2">
-                
+
               </div>
               <div className="service-content">
                 <h3>David Rodriguez</h3>
                 <h4>Luxury Redefined</h4>
                 <div class="testimonials-ratings mb-3">
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>   
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
                 </div>
-                <p>"I opted for the 'Luxury Redefined' package with Hela Travels, and it 
-                  exceeded all expectations. The accommodations were nothing short of 
-                  five-star, and the attention to detail in the itinerary showcased a 
-                  level of service that truly redefines luxury travel. I've traveled extensively, 
-                  and Hela Travels stands out for their commitment to excellence. Can't wait for 
+                <p>"I opted for the 'Luxury Redefined' package with Hela Travels, and it
+                  exceeded all expectations. The accommodations were nothing short of
+                  five-star, and the attention to detail in the itinerary showcased a
+                  level of service that truly redefines luxury travel. I've traveled extensively,
+                  and Hela Travels stands out for their commitment to excellence. Can't wait for
                   my next adventure with them!"</p>
               </div>
             </div>
             <div className="service">
               <div className="testimonials-image3">
-                
+
               </div>
               <div className="service-content">
                 <h3>Emily Turner</h3>
                 <h4>Cultural Odyssey</h4>
                 <div class="testimonials-ratings mb-3">
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>
-                    <i class="fa fa-star"><FaStar/></i>    
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
+                  <i class="fa fa-star"><FaStar /></i>
                 </div>
-                <p>"Our 'Cultural Odyssey' with Hela Travels was an immersion into the heart 
-                  and soul of each destination. From historic sites to local traditions, 
-                  every moment was a cultural revelation. The knowledgeable guides shared 
-                  insights that enriched our journey. Hela Travels transformed our desire for cultural exploration into 
+                <p>"Our 'Cultural Odyssey' with Hela Travels was an immersion into the heart
+                  and soul of each destination. From historic sites to local traditions,
+                  every moment was a cultural revelation. The knowledgeable guides shared
+                  insights that enriched our journey. Hela Travels transformed our desire for cultural exploration into
                   an unforgettable odyssey. Highly recommend!"</p>
               </div>
             </div>
           </div>
-        </div>   
+        </div>
       </section>
 
       <section className="subscribe-section">
         {/* write subscribe section here */}
 
         <div className="subscribe-container">
-           <div className="subscribe-image"></div>
-            <div className="subscribe-content">
-              <h2>Subscribe to our newsletter</h2>
-              <p align='justify'>Subscribe to our newsletter and unlock a world of exclusive travel offers and insider 
-                tips delivered directly to your inbox. Our curated content is designed to ignite your 
-                wanderlust and provide you with the latest insights into exciting destinations. Don't miss o
-                ut on the adventure – sign up now and let the exploration begin!</p>
-              <div className="subscribe-form">
-                <form action="#" method="post">
+          <div className="subscribe-image"></div>
+          <div className="subscribe-content">
+            <h2>Subscribe to our newsletter</h2>
+            <p align='justify'>Subscribe to our newsletter and unlock a world of exclusive travel offers and insider
+              tips delivered directly to your inbox. Our curated content is designed to ignite your
+              wanderlust and provide you with the latest insights into exciting destinations. Don't miss o
+              ut on the adventure – sign up now and let the exploration begin!</p>
+            <div className="subscribe-form">
+              <form action="#" method="post">
                 <input type="email" name="email" id="email" placeholder="Enter your email address" />
                 <button className="btn btn-success">Submit</button>
-                </form>
-              </div>
-              <div className="customers-stat">
-                <div className="stat">
-                  <h2>1000+</h2>
-                  <p>Customers</p>
-                </div>
-                <div className="stat">
-                  <h2>100+</h2>
-                  <p>Destinations</p>
-                </div>
-                <div className="stat">
-                  <h2>100+</h2>
-                  <p>Guides</p>
-                </div>
-              </div>
-
+              </form>
             </div>
+            <div className="customers-stat">
+              <div className="stat">
+                <h2>1000+</h2>
+                <p>Customers</p>
+              </div>
+              <div className="stat">
+                <h2>100+</h2>
+                <p>Destinations</p>
+              </div>
+              <div className="stat">
+                <h2>100+</h2>
+                <p>Guides</p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </section>
