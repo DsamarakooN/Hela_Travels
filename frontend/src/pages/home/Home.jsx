@@ -1,8 +1,25 @@
 import React from "react";
+import { useEffect } from "react"
 import "./Home.css"
 import { FaBed, FaUserTie, FaHotel, FaStar } from 'react-icons/fa';
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom"
 
 function Home() {
+
+  const navigate = useNavigate()
+
+  const { user } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login")
+    }
+  }, [user, navigate])
+
+  
+
+
 
   const [selectedTab, setSelectedTab] = React.useState(0);  // 0 = Home, 1 = Profile, 2 = Contact
 

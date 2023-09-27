@@ -4,6 +4,7 @@ import { getGuides } from '../../features/guides/guideSlice'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import "../../App.css"
 
 
 const AllGuides = () => {

@@ -52,12 +52,11 @@ export default function AllDrivers(){
         <div> 
         <input type="search" placeholder="Search for Drivers Here.." className="form-control" style={{marginBottom:20 }} onChange={(e) => setSearchInput(e.target.value)}></input>
         </div>
-        <hr></hr>
         
         {driver && filteredResults.map((d , index) => { 
           return (
 
-            <div className="card driverCards " key={index} style={{width: '16rem' }} >
+            <div className="card driverCards mt-3" key={index} style={{width: '16rem' }} >
               <div className="card-body">
                 <div className="driver-card-image">
                   <img src={d.d_image} alt="Driver Image" className="card-img" />
@@ -88,7 +87,6 @@ export default function AllDrivers(){
                
         )})
           }
-           <hr></hr>
 
         <div>
           <button id='btn1' style={{width:'180px', height:'40px',marginLeft:10, marginTop:10}} className="btn btn-primary">

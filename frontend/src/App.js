@@ -5,17 +5,20 @@ import AllDrivers from "./components/AllDrivers";
 import DriverTable from './components/DriverTable';
 import Home from './pages/home/Home';
 import Viewmore from './components/ViewMore';
-import Register from './pages/Register';
-import Login from './pages/Login';
+import Register from './pages/user/Register';
+import Login from './pages/user/Login';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Footer from './components/Footer';
 import './App.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Profile from './pages/UpdateProfile';
-import ProfileDetails from './pages/ProfileDetails';
+import Profile from './pages/user/UpdateProfile';
+import ProfileDetails from './pages/user/ProfileDetails';
 import AllGuides from './pages/guides/AllGuides';
 import AddGuides from './pages/guides/AddGuide';
+import Packages from './pages/packages/Packages';
+import Destination from './pages/destinations/Destination';
+import Hotels from './pages/hotels/Hotels';
 
 
 
@@ -40,6 +43,9 @@ function App() {
 
             <Route path='/guides' element={<AllGuides/>} />
             <Route path='/guides/add' element={<AddGuides/>} />
+            <Route path='/packages' element={<Packages/>} />
+            <Route path='/destinations' element={<Destination/>} />
+            <Route path='/hotels' element={<Hotels/>} />
           </Routes>
 
         <Footer/>

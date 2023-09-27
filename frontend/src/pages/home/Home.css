@@ -6,7 +6,7 @@
 }
 
 .hero__image{
-    width: 40%;
+    width: 38%;
     height: 73vh;
     background-image: url('../../../public/images/hero.jpg');
     background-size: cover;
@@ -37,7 +37,7 @@
     position: absolute;
     top: 5%;
     left: 4%;
-    width: 65%;
+    width: 60%;
     height: 40%;
     /* border: 1px solid #000; */
 }
@@ -217,7 +217,7 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    /* padding: 10px; */
     flex-direction: column;
     justify-content: center;
     align-items: center;

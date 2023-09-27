@@ -43,7 +43,7 @@ function Header() {
 
               <Nav.Item className="nav-item">
 
-                <NavLink to='/about' className={`${location.pathname === "/about" ? 'active-nav-link' : ''}`}>Packages</NavLink>
+                <NavLink to='/packages' className={`${location.pathname === "/packages" ? 'active-nav-link' : ''}`}>Packages</NavLink>
 
               </Nav.Item>
 
@@ -54,7 +54,7 @@ function Header() {
               </Nav.Item>
               <Nav.Item className="nav-item">
 
-                <NavLink to='/Product' className={`${location.pathname === "/Product" ? 'active-nav-link' : ''}`}>Hotels</NavLink>
+                <NavLink to='/hotels' className={`${location.pathname === "/hotels" ? 'active-nav-link' : ''}`}>Hotels</NavLink>
 
               </Nav.Item>
               <Nav.Item>
