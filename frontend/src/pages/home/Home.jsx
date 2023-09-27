@@ -235,9 +235,44 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>   
+      </section>
+
+      <section className="subscribe-section">
+        {/* write subscribe section here */}
+
+        <div className="subscribe-container">
+           <div className="subscribe-image"></div>
+            <div className="subscribe-content">
+              <h2>Subscribe to our newsletter</h2>
+              <p align='justify'>Subscribe to our newsletter and unlock a world of exclusive travel offers and insider 
+                tips delivered directly to your inbox. Our curated content is designed to ignite your 
+                wanderlust and provide you with the latest insights into exciting destinations. Don't miss o
+                ut on the adventure – sign up now and let the exploration begin!</p>
+              <div className="subscribe-form">
+                <form action="#" method="post">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" />
+                <button className="btn btn-success">Submit</button>
+                </form>
+              </div>
+              <div className="customers-stat">
+                <div className="stat">
+                  <h2>1000+</h2>
+                  <p>Customers</p>
+                </div>
+                <div className="stat">
+                  <h2>100+</h2>
+                  <p>Destinations</p>
+                </div>
+                <div className="stat">
+                  <h2>100+</h2>
+                  <p>Guides</p>
+                </div>
+              </div>
+
+            </div>
         </div>
 
-        
       </section>
     </>
   )
