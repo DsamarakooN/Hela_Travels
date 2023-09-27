@@ -138,6 +138,11 @@
 }
 
 @media (max-width: 450px) {
+    .hero__section{
+        width: full;
+        height: 90vh;
+        position: relative;
+    }
     .hotel-filters{
         font-size: 1.5rem;
         /* display: flex;
