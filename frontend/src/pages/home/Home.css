@@ -222,6 +222,7 @@
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif !important;
+    
 }
 
 .services-content{
@@ -318,18 +319,20 @@
 
 .about-container{
     width: 90%;
-    height: 545px;
+    height: 375px;
     display: flex;
     flex-direction: row;
     margin: auto;
     padding: 10px;
     margin-top: 20px;
     position: relative;
+    margin-bottom: 40px;
+    
 }
 
 .about-image{
-    width: 40%;
-    height: 85%;
+    width: 35%;
+    height: 90%;
     background-image: url('../../../public/images/Galle.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -348,7 +351,7 @@
     
     position: absolute;
     right: 5%;
-    top: 5%;
+    top: 7%;
 }
 
 .about-content h2{
@@ -358,7 +361,7 @@
 }
 
 .about-content p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #1D1D1D;
 }
@@ -405,4 +408,60 @@
         text-shadow: 2px 2px 4px #000000;
         padding: 5PX;
     }
+}
+
+/* testimonials css */
+.testimonials-image1{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url('https://xsgames.co/randomusers/assets/avatars/male/74.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-image2{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url('https://i.imgur.com/KykRUCV.jpeg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-image3{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/55758/random-user-31.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-ratings{
+    color: #ffe600;
 }

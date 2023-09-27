@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css"
-import { FaBed, FaUserTie , FaHotel   } from 'react-icons/fa'
+import { FaBed, FaUserTie , FaHotel, FaStar  } from 'react-icons/fa'
 import { Justify } from "react-bootstrap-icons";
 // import Tab from 'react-bootstrap/Tab';
 // import Tabs from 'react-bootstrap/Tabs';
@@ -97,7 +97,7 @@ function Home() {
       <section className="services-section">
         <div className="services-container">
           <div className="service-heading">
-            <h2>Our Services</h2>
+            <h2> <span style={{ color: "#25D366" }}>Our</span> Services</h2>
           </div>
           <div className="services-content">
             <div className="service">
@@ -145,7 +145,7 @@ function Home() {
         <div className="about-container">
           <div className="about-image"></div>
           <div className="about-content">
-            <h2>About Us</h2>
+            <h2><span style={{ color: "#25D366" }}>About </span> Us</h2>
             
             <p align="justify">Founded in 2021, Hela Travels is a travel company that specializes in providing
               personalized travel experiences. We are passionate about helping our clients
@@ -159,6 +159,85 @@ function Home() {
             
           </div>
         </div>
+      </section>
+
+      <section className="testimonials-section">
+
+      <div className="services-container">
+          <div className="service-heading">
+            <h2><span style={{ color: "#25D366" }}>Happy</span> Testimonials</h2>
+          </div>
+          <div className="services-content">
+            <div className="service">
+              <div className="testimonials-image1">
+                
+              </div>
+              <div className="service-content">
+                <h3>Jane Smith</h3>
+                <h4>Enchanting Exploration</h4>
+                <div class="testimonials-ratings mb-3">
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    
+                </div>
+                <p>"Booking with Hela Travels was a game-changer for our family 
+                  vacation. The 'Enchanting Exploration' package allowed us to 
+                  discover hidden gems we would have never found on our own. From the 
+                  moment we touched down, the itinerary flowed seamlessly, and the local 
+                  guides made our experience truly enchanting. Thank you, Hela Travels, for 
+                  turning our vacation into a magical journey!"</p>
+              </div>
+            </div>
+            <div className="service">
+              <div className="testimonials-image2">
+                
+              </div>
+              <div className="service-content">
+                <h3>David Rodriguez</h3>
+                <h4>Luxury Redefined</h4>
+                <div class="testimonials-ratings mb-3">
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>   
+                </div>
+                <p>"I opted for the 'Luxury Redefined' package with Hela Travels, and it 
+                  exceeded all expectations. The accommodations were nothing short of 
+                  five-star, and the attention to detail in the itinerary showcased a 
+                  level of service that truly redefines luxury travel. I've traveled extensively, 
+                  and Hela Travels stands out for their commitment to excellence. Can't wait for 
+                  my next adventure with them!"</p>
+              </div>
+            </div>
+            <div className="service">
+              <div className="testimonials-image3">
+                
+              </div>
+              <div className="service-content">
+                <h3>Emily Turner</h3>
+                <h4>Cultural Odyssey</h4>
+                <div class="testimonials-ratings mb-3">
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>
+                    <i class="fa fa-star"><FaStar/></i>    
+                </div>
+                <p>"Our 'Cultural Odyssey' with Hela Travels was an immersion into the heart 
+                  and soul of each destination. From historic sites to local traditions, 
+                  every moment was a cultural revelation. The knowledgeable guides shared 
+                  insights that enriched our journey. Hela Travels transformed our desire for cultural exploration into 
+                  an unforgettable odyssey. Highly recommend!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
       </section>
     </>
   )
