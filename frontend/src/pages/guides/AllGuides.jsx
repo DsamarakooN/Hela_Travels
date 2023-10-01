@@ -8,6 +8,8 @@ import "../../App.css"
 
 
 const AllGuides = () => {
+    
+
     const dispatch = useDispatch();
     const { guide, guides , isLoading, isError, message} = useSelector(state => state.guide);
     const { user } = useSelector((state) => state.auth);
@@ -37,25 +39,6 @@ const AllGuides = () => {
         
         <div className="guideCards__container">
             
-            {/* {guides?.map((guides) => (
-                <div className="card guideCards " key={guides._id} style={{ width: '20rem' }} >
-                    <div className="guideCards-body">
-                        <div className="guideCards-image">
-                            <img src={guides.guideImage} alt="Driver Image" className="card-img" />
-                        </div>
-                        <div className="guideCard-details">
-                                    <h4 className="card-title">{guides.guideName}</h4>
-                                    <p className="card-text">{guides.guidePhone}</p>
-                                    <p><span class="badge bg-info text-dark ">{guides.guideExperience} years of experience</span></p>
-                        </div>
-                        <center>
-
-                            <Link to={"/#"}><button className='btn btn-outline-success mb-3'>View more</button></Link>
-
-                        </center>
-                    </div>
-                </div>
-            ))} */}
 
 {isLoading ? (
               Array(10).fill().map((item, index) => (
@@ -101,7 +84,7 @@ const AllGuides = () => {
         </div>
         
 
-        {user.role === 'business' && (
+        {user && user.role === 'business' && (
             <div >
                 <Link to="/guides/add" className="btn btn-primary">
                     Add Guide

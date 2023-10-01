@@ -5,9 +5,13 @@ import {Link} from "react-router-dom";
 import '../App.css';
 //import {Link, useParams} from "react-router-dom";
 import '../AddDriver.css';
+import { useSelector } from "react-redux";
 
 
 export default function AllDrivers(){
+
+  
+  const { user } = useSelector((state) => state.auth);
 
     const Navigate = useNavigate()
     
@@ -88,11 +92,15 @@ export default function AllDrivers(){
         )})
           }
 
-        <div>
+        {user && user.role === "business" && (
+          <div className="mt-3">
           <button id='btn1' style={{width:'180px', height:'40px',marginLeft:10, marginTop:10}} className="btn btn-primary">
             <a href="/add" target="_blank" style={{textDecoration:'none', color:'white'}}>Register as Driver</a>
           </button>
+
         </div>
+    )
+    }
 
         </div>
     )

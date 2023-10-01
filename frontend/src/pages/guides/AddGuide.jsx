@@ -104,6 +104,7 @@ function AddGuide() {
 
         setImage(URL.createObjectURL(event.target.files[0]));
         setGuideImage(downloadURL);
+        console.log(downloadURL);
     }
 };
   // Function to remove the image

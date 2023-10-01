@@ -4,6 +4,7 @@ import "./Home.css"
 import { FaBed, FaUserTie, FaHotel, FaStar } from 'react-icons/fa';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2";
 
 function Home() {
 
