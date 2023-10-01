@@ -1,22 +1,22 @@
 import React from "react";
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import "./Home.css"
 import { FaBed, FaUserTie, FaHotel, FaStar } from 'react-icons/fa';
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"
+// import { useSelector } from "react-redux";
+// import { useNavigate } from "react-router-dom"
 import Swal from "sweetalert2";
 
 function Home() {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (!user) {
-      navigate("/login")
-    }
-  }, [user, navigate])
+  // useEffect(() => {
+  //   if (!user) {
+  //     navigate("/login")
+  //   }
+  // }, [user, navigate])
 
   
 
