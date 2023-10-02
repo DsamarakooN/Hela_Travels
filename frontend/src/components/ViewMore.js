@@ -32,7 +32,7 @@ const Viewmore = (props) => {
     useEffect(() => {
         axios
         .get(
-            `http://localhost:8070/driver/get/${id}`
+            `https://hela-travels.onrender.com/driver/get/${id}`
         )
         .then((res) =>  {
             const {d_name,d_email,d_telephone,d_licNo,d_experience,v_type,v_image,d_description,d_image}= res.data.driver;
