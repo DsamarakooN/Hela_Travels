@@ -13,23 +13,23 @@ export default function AllDrivers(){
   
   const { user } = useSelector((state) => state.auth);
 
-    const Navigate = useNavigate()
+  const Navigate = useNavigate()
     
-   // const {id} = useParams();
-    const[driver , setDrivers] = useState([]);
+  // const {id} = useParams();
+  const[driver , setDrivers] = useState([]);
 
     //For search
     const [searchInput, setSearchInput] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
 
     useEffect(() => {
-        function getDrivers(){
-            axios.get("https://hela-travels.onrender.com/api/drivers/").then((res) => {
-                setDrivers(res.data);
-            }).catch((err) => {
-                alert(err.message);
-            })
-        }
+      function getDrivers(){
+        axios.get("https://hela-travels.onrender.com/api/drivers/").then((res) => {
+          setDrivers(res.data);
+        }).catch((err) => {
+          alert(err.message);
+        })
+      }
         getDrivers();
 
     },[driver])
@@ -40,10 +40,10 @@ export default function AllDrivers(){
     useEffect(() => {
     setFilteredResults(
 
-       driver.filter((d) => {
+      driver.filter((d) => {
         return d.d_name.toLowerCase().includes(searchInput.toLowerCase())
-        })
-      )
+      })
+    )
     }, [searchInput, driver])
 
     //endsearch
@@ -88,7 +88,6 @@ export default function AllDrivers(){
                 </center>
             </div>
             </div>
-               
         )})
           }
 
