@@ -63,10 +63,17 @@
     position: absolute;
     top: 53%;
     left: 4%;
-    width: 70%;
-    height: 40%;
+    width: 65%;
+    height: 35%;
     border-radius: 10px;
     border: #25D366 2px solid;
+}
+
+@media (max-width: 1440px) {
+    .tab-container-inner{
+        width: 70%;
+        height: 40%;
+    }
 }
 
 .header-list{
