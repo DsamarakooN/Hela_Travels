@@ -19,6 +19,7 @@ import AddGuides from './pages/guides/AddGuide';
 import Packages from './pages/packages/Packages';
 import Destination from './pages/destinations/Destination';
 import Hotels from './pages/hotels/Hotels';
+import Destinations from './Destinations';
 
 
 
@@ -44,7 +45,7 @@ function App() {
             <Route path='/guides' element={<AllGuides/>} />
             <Route path='/guides/add' element={<AddGuides/>} />
             <Route path='/packages' element={<Packages/>} />
-            <Route path='/destinations' element={<Destination/>} />
+            <Route path='/destinations' element={<Destinations/>} />
             <Route path='/hotels' element={<Hotels/>} />
           </Routes>
 
