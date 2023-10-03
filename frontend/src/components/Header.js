@@ -18,8 +18,6 @@ function Header() {
   const dispatch = useDispatch()
   const { user } = useSelector((state) => state.auth)
 
-  const firstName = user && user.name.split(' ')[0]
-
   const onLogout = () => {
     dispatch(logout())
     dispatch(reset())
@@ -85,7 +83,7 @@ function Header() {
                       )}
                     </button>
                     <ul class="dropdown-menu">
-                      <li>Hello, <br></br> {firstName}</li>
+                      <li>Hello, <br></br> {user.name.split(' ')[0]}</li>
                       <li><a class="dropdown-item" href="/profile">Profile</a></li>
                       <li><a class="dropdown-item" href="/profile">Settings</a></li>
                       <li><a class="dropdown-item" href="#" onClick={onLogout}>Logout</a></li>
