@@ -12,7 +12,6 @@ import Spinner from '../../components/Spinner'
 
 
 function AddGuide() {
-
   // fuction to dispatch the createGuide action
   const [guideName, setGuideName] = React.useState("");
   const [guideEmail, setGuideEmail] = React.useState("");
