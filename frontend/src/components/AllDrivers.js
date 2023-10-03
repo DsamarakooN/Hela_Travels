@@ -3,16 +3,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom";
 import '../App.css';
-//import {Link, useParams} from "react-router-dom";
-import '../AddDriver.css';
 import { useSelector } from "react-redux";
-
 
 export default function AllDrivers(){
 
-  
   const { user } = useSelector((state) => state.auth);
-
   const Navigate = useNavigate()
     
   // const {id} = useParams();
