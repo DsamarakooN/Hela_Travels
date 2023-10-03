@@ -78,6 +78,7 @@ body::-webkit-scrollbar-track {
 
     &:hover {
       color: #25D366;
+      text-decoration: none;
     }
 }
 
