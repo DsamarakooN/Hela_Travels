@@ -93,6 +93,18 @@ body::-webkit-scrollbar-track {
   font-size: 1.5em;
 }
 
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.744);
+  width: 125px;
+  height: auto;
+  right:4px !important;
+  left: auto !important;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+
 
   /* hero section */
   .headline {
@@ -697,6 +709,8 @@ height: 90vh;
   text-align: center;
   color: #727272;
 }
+
+
 
 
   
