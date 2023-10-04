@@ -120,7 +120,7 @@ function AddGuide() {
   }
 
   return (
-    <section className='addGuide__Container'>
+    <section className='addGuide__Container mt-4 mb-4'>
       <div className='addGuide__Container__heading'>
         <h1>Be a part of the <span style={{ color: "#25D366" }}>Hela Travels </span> family</h1>
         <h2>Fill the form below to register as a guide</h2>

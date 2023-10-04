@@ -66,7 +66,7 @@ function ProfileDetails() {
                 <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
                 <div className="card-body p-5">
 
-                    <Link to="/updateprofile" className="btn btn-success btn-lg btn-block">Register as Guide</Link>
+                    <Link to="/guides/add" className="btn btn-success btn-lg btn-block">Register as Guide</Link>
 
                 </div>
                 </div>
