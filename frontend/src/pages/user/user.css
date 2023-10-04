@@ -23,3 +23,14 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
+.container-services{
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

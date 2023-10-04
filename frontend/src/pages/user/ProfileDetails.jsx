@@ -60,7 +60,7 @@ function ProfileDetails() {
             </div>
             
         </div>
-        <div className="container-fluid">
+        <div className="container-services">
             <div className="row">
             <div className="col-12 text-center mt-5">
                 <p>Back to <Link to="/">Home</Link></p>
