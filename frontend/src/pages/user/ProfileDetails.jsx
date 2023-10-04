@@ -60,12 +60,18 @@ function ProfileDetails() {
             </div>
             
         </div>
-        <div className="container-services">
-            <div className="row">
-            <div className="col-12 text-center mt-5">
-                <p>Back to <Link to="/">Home</Link></p>
+        <div className="profile__container py-1 h-100">
+            
+            <div className="profile-Form">
+                <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
+                <div className="card-body p-5">
+
+                    <Link to="/updateprofile" className="btn btn-success btn-lg btn-block">Register as Guide</Link>
+
+                </div>
+                </div>
             </div>
-            </div>
+            
         </div>
         </section>
     </>
