@@ -105,26 +105,6 @@ body::-webkit-scrollbar-track {
   padding-left: 10px;
 }
 
-
-
-  /* hero section */
-  .headline {
-    left: 130px;
-  } 
-  .clipped {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  @media screen and (max-width: 650px){
-    .headline {
-      left: 20px;
-    } 
-    .clipped {
-      clip-path: none;
-      max-height: 300px !important;
-    }
-  }
-
-
   /* footer */
   footer{
     background-color: hsl(0, 0%, 100%);

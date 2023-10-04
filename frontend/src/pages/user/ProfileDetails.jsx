@@ -2,16 +2,16 @@ import React from 'react'
 import { FaUser } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import './user.css'
 
 function ProfileDetails() {
     const user = useSelector((state) => state.auth.user)
   return (
     <>
-        <section className="vh-90"  >
+        <section className="profile-page vh-90"  >
         <div className="profile__container py-1 h-100">
-            <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+            
+            <div className="profile-Form">
                 <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
                 <div className="card-body p-5">
                     <div className="text-center">
@@ -46,7 +46,7 @@ function ProfileDetails() {
                     </div>
 
                     {/* this business tipe div should display only role === 'business' */}
-                    {user.role === 'business' && (
+                    {user && user.role === 'business' && (
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form3Example3">Business Type</label>
                             <input type="text" id="businessType" className="form-control form-control-lg"
@@ -57,6 +57,13 @@ function ProfileDetails() {
                     <Link to="/updateprofile" className="btn btn-success btn-lg btn-block">Update Profile</Link>
                 </div>
                 </div>
+            </div>
+            
+        </div>
+        <div className="container-fluid">
+            <div className="row">
+            <div className="col-12 text-center mt-5">
+                <p>Back to <Link to="/">Home</Link></p>
             </div>
             </div>
         </div>
