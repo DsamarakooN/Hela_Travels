@@ -84,7 +84,7 @@ const AllGuides = () => {
         </div>
         
 
-        {user && user.role === 'business' && (
+        {user && user.role === 'business' &&  (
             <div >
                 <Link to="/guides/add" className="btn btn-primary">
                     Add Guide
