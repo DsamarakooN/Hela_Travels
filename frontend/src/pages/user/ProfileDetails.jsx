@@ -66,7 +66,16 @@ function ProfileDetails() {
                 <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
                 <div className="card-body p-5">
 
+                {user && user.role === 'business' && (
+                    <>
                     <Link to="/guides/add" className="btn btn-success btn-lg btn-block">Register as Guide</Link>
+                    <Link to="/guides/add" className="btn btn-success btn-lg btn-block">Register as Driver</Link>
+                    <Link to="/guides/add" className="btn btn-success btn-lg btn-block">Register your Hotel</Link>
+                    </>
+                    
+                )}
+
+                    
 
                 </div>
                 </div>
