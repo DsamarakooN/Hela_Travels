@@ -24,12 +24,6 @@ const AllGuides = () => {
 
     }, [dispatch]);
 
-    // if (isLoading) {
-    //     return <Spinner />
-    // }
-
-    //console.log(guides);
-  
   return (
     <div className="guide__container">
         
