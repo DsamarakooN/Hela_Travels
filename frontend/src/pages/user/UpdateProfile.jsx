@@ -58,11 +58,11 @@ function UpdateProfile() {
 
   return (
     <section className="vh-90">
-      <div className="profile__container py-1 h-100">
+      <div className="update-profile__container py-1 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
-              <div className="card-body p-5 ">
+            <div className="update-profile-card shadow-2-strong" style={{ borderRadius: '1rem' }}>
+              <div className="update-profile-card-body p-5 ">
                 <div className="text-center">
                 <h1 className="mb-0"><FaUser /></h1>
                 <h2 className="mb-5"><span style={{ color: "#25D366" }}>Update</span> Profile</h2>
